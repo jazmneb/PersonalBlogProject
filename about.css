@@ -1,0 +1,117 @@
+h1{
+    font-size: 60px;
+    margin: auto;
+    background-color: rgb(255, 127, 206,.2);
+    font-family: "Raleway";
+}
+p{
+    margin: 5%;
+    font-family:'Roboto Slab';
+    font-size:16px;
+    text-align: center;
+    background-color: rgb(240, 248, 255,.75);
+}
+h2{
+    margin: 5%;
+    font-family: "Raleway";
+    text-align: center;
+    background-color: rgb(240, 248, 255,.75);
+}
+.container{
+    display: grid;
+    grid-template-columns:600px;
+    grid-template-rows: 260px 50px auto 50px;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "main"
+    "ft";
+}
+.box{
+    background-color: rgba(164, 182, 206,0.5);
+    color: rgb(32, 35, 36);
+    margin-top: .75em;
+    margin-left: 1.5em;
+    box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+.header{
+    width: 100%;
+    grid-area: hd;
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 1px #000;
+    background-image:url('https://img.freepik.com/free-photo/2d-graphic-colorful-wallpaper-with-grainy-gradients_23-2151001560.jpg?t=st=1719386844~exp=1719390444~hmac=37abe2bea2363e048ad317062ecb5ac3999cc0e4d01ab275d629189d7bcaf5dd&w=826');
+
+}
+.navigation{
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: sd;
+}
+.content{
+    grid-area: main;
+    background-image:url('https://img.freepik.com/free-photo/2d-graphic-colorful-wallpaper-with-grainy-gradients_23-2151001560.jpg?t=st=1719386844~exp=1719390444~hmac=37abe2bea2363e048ad317062ecb5ac3999cc0e4d01ab275d629189d7bcaf5dd&w=826');
+}
+.footer{
+    grid-area: ft;
+    font-family: 'Raleway';
+    font-display: center;
+}
+#nestedgrid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin-right: 5%;
+}
+img{
+    height: 180px;
+    width: 180px;
+}
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 25px;
+    max-width: 250px;
+    margin: auto;
+  }
+  
+  figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+  }
+@media(min-width:900px){
+    .container{
+        display:grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 150px 50px 600px 50px;
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "sd sd sd sd sd sd sd sd"
+        "main main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+    #nestedgrid{
+        display: grid;
+        grid-template-columns: 450px 700px;
+        grid-template-rows: 580px;
+        grid-gap:2px;
+        justify-content: center;
+    }
+    img{
+        height: auto;
+        width: 150px;
+        margin-left: 28%;
+        margin-top: 5%;
+        border-radius: 50%;
+    }
+}
